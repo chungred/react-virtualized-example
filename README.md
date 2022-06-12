@@ -22,7 +22,12 @@ Khi ta cuộn thì 1 số phần tử sẽ bị loại khỏi DOM để tối ư
 Đoạn code ví dụ sử dụng react virtualized hiển thị list danh sách lên đến 10000 phần tử:
 
 ```javascript
-const list = Array(rowCount)
+const rowCount = 10000;
+const rowHeight = 50;
+const listHeight = 500;
+
+const App = () => {
+  const list = Array(rowCount)
     .fill()
     .map((val, idx) => {
       return {
@@ -75,4 +80,6 @@ const list = Array(rowCount)
     </div>
   );
 };
+export default App;
+
 ```

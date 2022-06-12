@@ -3,7 +3,7 @@ import "./App.css";
 import { loremIpsum } from "lorem-ipsum";
 import { List, AutoSizer } from "react-virtualized";
 
-const rowCount = 1000;
+const rowCount = 10000;
 const rowHeight = 50;
 const listHeight = 500;
 
