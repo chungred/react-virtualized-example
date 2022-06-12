@@ -1,28 +1,14 @@
-## Virtual Scroll Sample (React virtualized)
+import React from "react";
+import "./App.css";
+import { loremIpsum } from "lorem-ipsum";
+import { List, AutoSizer } from "react-virtualized";
 
-Như chúng ta đã biết khi trình duyệt web tải một lượng dữ liệu xuống để hiển thị (ví dụ 10000 bản ghi) sẽ rất chậm, đơ, hiệu năng thấp ảnh hưởng tới khá nhiều trải nghiệm người dùng (UX). 
+const rowCount = 1000;
+const rowHeight = 50;
+const listHeight = 500;
 
-Chính vì thế là người ta đã sinh ra phương pháp cải thiện đó là virtual scroll, chỉ render những phần trong view point (khung nhìn) của người dùng. Thay vì hiển thị hết 10000 phần tử HTML thì chỉ cần hiển thị hơn chục phần tử. 
-
-Khi ta cuộn thì 1 số phần tử sẽ bị loại khỏi DOM để tối ưu và thanh cuộn sinh ra là thanh cuộn ảo. Như thế cho dù chúng ta có hiển thị nhiều dữ liệu như nào đi nữa ứng dụng vẫn sẽ mượt mà :))
-
-
-Ảnh minh họa:
-
-![Virtual Scroll](./virtual-scroll.gif)
-
-## CÀI ĐẶT
-
-    npm install
-
-## SỬ DỤNG
-
-    npm start
-
-Đoạn code ví dụ sử dụng react virtualized hiển thị list danh sách lên đến 10000 phần tử:
-
-```javascript
-const list = Array(rowCount)
+const App = () => {
+  const list = Array(rowCount)
     .fill()
     .map((val, idx) => {
       return {
@@ -75,4 +61,4 @@ const list = Array(rowCount)
     </div>
   );
 };
-```
+export default App;

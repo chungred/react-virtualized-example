@@ -1,0 +1,22 @@
+.App {
+  display: block;
+  margin: 0 auto;
+}
+
+.row-list {
+  display: flex;
+  align-items: center;
+}
+
+.row-list:nth-child(2n + 1) {
+  background: #eee;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  padding-left: 5px;
+}
